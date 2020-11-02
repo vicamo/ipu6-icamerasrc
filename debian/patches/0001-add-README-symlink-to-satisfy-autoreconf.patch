@@ -1,0 +1,22 @@
+From 6a383c41012a4065f8244d65a18f3935409cfa41 Mon Sep 17 00:00:00 2001
+From: You-Sheng Yang <vicamo@gmail.com>
+Date: Fri, 18 Dec 2020 07:09:42 +0000
+Subject: [PATCH] add README symlink to satisfy autoreconf
+
+Signed-off-by: You-Sheng Yang <vicamo@gmail.com>
+---
+ README | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 120000 README
+
+diff --git a/README b/README
+new file mode 120000
+index 0000000..42061c0
+--- /dev/null
++++ b/README
+@@ -0,0 +1 @@
++README.md
+\ No newline at end of file
+-- 
+2.25.1
+

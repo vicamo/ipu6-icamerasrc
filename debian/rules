@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/default.mk
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	CHROME_SLIM_CAMHAL=ON dh_auto_configure
