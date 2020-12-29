@@ -5,7 +5,8 @@ Build-Depends:
  debhelper-compat (= 12),
  libcamhal-dev,
  libgstreamer1.0-dev,
- libgstreamer-plugins-base1.0-dev
+ libgstreamer-plugins-base1.0-dev,
+ pkg-config,
 Standards-Version: 4.5.0
 Maintainer: Commercial Engineering <commercial-engineering@canonical.com>
 Vcs-Browser: https://github.com/intel/icamerasrc/tree/icamerasrc_slim_api
