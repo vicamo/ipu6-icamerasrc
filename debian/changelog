@@ -1,4 +1,4 @@
-ipu6-icamerasrc (0~git20201126.5b39414-1) UNRELEASED; urgency=medium
+gst-plugins-icamera (0~git20201126.5b39414-1) UNRELEASED; urgency=medium
 
   * Initial release.
 

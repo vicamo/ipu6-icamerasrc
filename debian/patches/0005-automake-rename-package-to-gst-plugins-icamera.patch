@@ -1,0 +1,26 @@
+From 5b766389e35e21f78e9e6a61631be0cd8b112f05 Mon Sep 17 00:00:00 2001
+From: You-Sheng Yang <vicamo@gmail.com>
+Date: Tue, 29 Dec 2020 14:13:14 +0800
+Subject: [PATCH] automake: rename package to gst-plugins-icamera
+
+Signed-off-by: You-Sheng Yang <vicamo@gmail.com>
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 237304c..868d6ab 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -45,7 +45,7 @@ dnl required version of autoconf
+ AC_PREREQ([2.53])
+ 
+ dnl TODO: fill in your package name and package version here
+-AC_INIT([my-plugin-package],[1.0.0])
++AC_INIT([gst-plugins-icamera],[1.0.0])
+ 
+ dnl required versions of gstreamer and plugins-base
+ GST_REQUIRED=1.0.0
+-- 
+2.29.2
+
