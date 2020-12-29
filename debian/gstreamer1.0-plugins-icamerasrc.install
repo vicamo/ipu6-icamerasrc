@@ -1,2 +1,2 @@
-/usr/lib/*/gstreamer-1.0/libgsticamerasrc.so
-/usr/lib/*/libgsticamerainterface.so
+usr/lib/*/gstreamer-1.0/libgsticamerasrc.so
+usr/lib/*/libgsticamerainterface-*.so.*

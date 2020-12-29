@@ -1,1 +1,4 @@
 0001-add-README-symlink-to-satisfy-autoreconf.patch
+0002-automake-move-disable-static-flag-into-LT_INIT.patch
+0003-automake-correct-libgsticamerainterface-headers-inst.patch
+0004-automake-install-libgsticamerainterface-with-correct.patch

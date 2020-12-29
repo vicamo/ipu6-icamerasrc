@@ -1,0 +1,25 @@
+From: You-Sheng Yang <vicamo@gmail.com>
+Date: Tue, 29 Dec 2020 14:01:04 +0800
+Subject: automake: correct libgsticamerainterface headers install path
+
+Headers for individual plugin should be installed to
+/usr/include/gstreamer/gst/<name>.
+
+Signed-off-by: You-Sheng Yang <vicamo@gmail.com>
+---
+ src/interfaces/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/interfaces/Makefile.am b/src/interfaces/Makefile.am
+index 59de66f..ede94ab 100644
+--- a/src/interfaces/Makefile.am
++++ b/src/interfaces/Makefile.am
+@@ -65,7 +65,7 @@ libgsticamerainterface_la_LIBADD = $(GST_LIBS) $(CAMHAL_LIBS)
+ # for hardening-check
+ libgsticamerainterface_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS) -fPIE -fPIC -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wl,-z,relro -Wl,-z,now
+ 
+-libgsticamerainterfaceincludedir = $(inludedir)
++libgsticamerainterfaceincludedir = $(includedir)/gstreamer-@GST_API_VERSION@/gst/icamera
+ 
+ libgsticamerainterfaceinclude_HEADERS = gstcamera3ainterface.h \
+                                         gstcameraispinterface.h \

@@ -1,0 +1,50 @@
+From: You-Sheng Yang <vicamo@gmail.com>
+Date: Tue, 29 Dec 2020 13:57:50 +0800
+Subject: [PATCH] automake: move disable-static flag into LT_INIT
+
+Signed-off-by: You-Sheng Yang <vicamo@gmail.com>
+---
+ configure.ac               | 2 +-
+ src/Makefile.am            | 2 --
+ src/interfaces/Makefile.am | 2 --
+ 3 files changed, 1 insertion(+), 5 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 237304c..8263712 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -64,7 +64,7 @@ AC_PROG_CXX
+ 
+ dnl required version of libtool
+ LT_PREREQ([2.2.6])
+-LT_INIT
++LT_INIT([disable-static])
+ 
+ dnl give error and exit if we don't have pkgconfig
+ AC_CHECK_PROG(HAVE_PKGCONFIG, pkg-config, [ ], [
+diff --git a/src/Makefile.am b/src/Makefile.am
+index d567f3e..c610339 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -95,8 +95,6 @@ libgsticamerasrc_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS)
+ # for hardening-check
+ libgsticamerasrc_la_LDFLAGS += -fPIE -fPIC -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wl,-z,relro -Wl,-z,now
+ 
+-libgsticamerasrc_la_LIBTOOLFLAGS = --tag=disable-static
+-
+ # headers we need but don't want installed
+ noinst_HEADERS = gstcamerasrc.h \
+                  gstcameraformat.h \
+diff --git a/src/interfaces/Makefile.am b/src/interfaces/Makefile.am
+index df00809..59de66f 100644
+--- a/src/interfaces/Makefile.am
++++ b/src/interfaces/Makefile.am
+@@ -65,8 +65,6 @@ libgsticamerainterface_la_LIBADD = $(GST_LIBS) $(CAMHAL_LIBS)
+ # for hardening-check
+ libgsticamerainterface_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS) -fPIE -fPIC -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Wl,-z,relro -Wl,-z,now
+ 
+-libgsticamerainterface_la_LIBTOOLFLAGS = --tag=disable-static
+-
+ libgsticamerainterfaceincludedir = $(inludedir)
+ 
+ libgsticamerainterfaceinclude_HEADERS = gstcamera3ainterface.h \
